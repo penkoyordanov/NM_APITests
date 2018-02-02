@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "count": {
+      "type": "number"
+    },
+    "countnewtoday": {
+      "type": "number"
+    },
+    "ads": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "publishdate",
+          "description",
+          "location",
+          "isSold",
+          "isSaved",
+          "isInactive",
+          "publisherName",
+          "ownerid",
+          "savedcount",
+          "commentscount",
+          "sharedcount",
+          "publisherImage",
+          "locationLatitude",
+          "locationLongitude",
+          "id",
+          "title",
+          "price",
+          "category",
+          "rentCategory",
+          "countryCode",
+          "publicUrl"
+        ],
+        "properties": {
+          "publishdate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 0
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1
+          },
+          "isSold": {
+            "type": "boolean"
+          },
+          "isSaved": {
+            "type": "boolean"
+          },
+          "isInactive": {
+            "type": "boolean"
+          },
+          "publisherName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ownerid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "savedcount": {
+            "type": "number"
+          },
+          "commentscount": {
+            "type": "number"
+          },
+          "sharedcount": {
+            "type": "number"
+          },
+          "followSource": {
+            "type": "object",
+            "properties": {
+              "fromDefaultArea": {
+                "type": "boolean"
+              },
+              "fromFollowedArea": {
+                "type": "boolean"
+              },
+              "fromFollowedUser": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "fromDefaultArea",
+              "fromFollowedArea",
+              "fromFollowedUser"
+            ]
+          },
+          "locationLatitude": {
+            "type": "number"
+          },
+          "locationLongitude": {
+            "type": "number"
+          },
+          "id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "price": {
+            "type": "number"
+          },
+          "category": {
+            "type": "number"
+          },
+          "rentCategory": {
+            "type": "number"
+          },
+          "image": {},
+          "countryCode": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publicUrl": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "count",
+    "countnewtoday",
+    "ads"
+  ]
+}

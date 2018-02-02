@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "isAdOwner": {
+      "type": "boolean"
+    },
+    "sender": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "contactId": {
+          "type": "number"
+        },
+        "firstName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lastName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image": {
+          "type": "string",
+          "minLength": 1
+        },
+        "email": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phone": {
+          "type": "string"
+        },
+        "isOnline": {
+          "type": "boolean"
+        },
+        "countryCode": {},
+        "locationLatitude": {},
+        "locationLongitude": {},
+        "username": {
+          "type": "string",
+          "minLength": 1
+        },
+        "placeId": {},
+        "suggestions": {}
+      },
+      "required": [
+        "id",
+        "contactId",
+        "firstName",
+        "lastName",
+        "image",
+        "email",
+        "phone",
+        "isOnline",
+        "username"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dateCreated": {
+      "type": "string",
+      "minLength": 1
+    },
+    "files": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "name",
+          "url",
+          "thumbnail",
+          "type",
+          "size"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "originalName": {},
+          "url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "thumbnail": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "number"
+          },
+          "size": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "isAdOwner",
+    "sender",
+    "text",
+    "dateCreated",
+    "files"
+  ]
+}

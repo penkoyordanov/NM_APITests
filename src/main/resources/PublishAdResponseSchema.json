@@ -1,0 +1,260 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "category": {
+      "type": "number"
+    },
+    "rentCategory": {
+      "type": "number"
+    },
+    "condition": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "price": {
+      "type": "number"
+    },
+    "minPrice": {},
+    "keywords": {
+      "type": "array",
+      "items": {
+        "properties": {}
+      }
+    },
+    "savedate": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publishdate": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowComments": {
+      "type": "boolean"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string",
+          "minLength": 1
+        },
+        "placeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "countryCode": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "address",
+        "placeId",
+        "countryCode"
+      ]
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "firstName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lastName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "email": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "firstName",
+        "lastName",
+        "phone",
+        "email"
+      ]
+    },
+    "isSold": {
+      "type": "boolean"
+    },
+    "isInactive": {
+      "type": "boolean"
+    },
+    "publisher": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "contactId": {
+          "type": "number"
+        },
+        "firstName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lastName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image": {
+          "type": "string",
+          "minLength": 1
+        },
+        "email": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "isOnline": {
+          "type": "boolean"
+        },
+        "countryCode": {},
+        "locationLatitude": {},
+        "locationLongitude": {},
+        "username": {
+          "type": "string",
+          "minLength": 1
+        },
+        "placeId": {},
+        "suggestions": {}
+      },
+      "required": [
+        "id",
+        "contactId",
+        "firstName",
+        "lastName",
+        "image",
+        "email",
+        "phone",
+        "isOnline",
+        "username"
+      ]
+    },
+    "media": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "id",
+          "order",
+          "startAt",
+          "endAt",
+          "mute",
+          "originalUrl",
+          "originalName",
+          "name",
+          "url",
+          "type"
+        ],
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "description": {},
+          "order": {
+            "type": "number"
+          },
+          "startAt": {
+            "type": "number"
+          },
+          "endAt": {
+            "type": "number"
+          },
+          "mute": {
+            "type": "boolean"
+          },
+          "originalUrl": {
+            "type": "string",
+            "minLength": 1
+          },
+          "originalName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "ownerId": {
+      "type": "number"
+    },
+    "isSaved": {
+      "type": "boolean"
+    },
+    "isContactChanged": {
+      "type": "boolean"
+    },
+    "locationLatitude": {
+      "type": "number"
+    },
+    "locationLongitude": {
+      "type": "number"
+    },
+    "publicUrl": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "rentCategory",
+    "condition",
+    "title",
+    "description",
+    "price",
+    "savedate",
+    "publishdate",
+    "allowComments",
+    "address",
+    "contact",
+    "isSold",
+    "isInactive",
+    "publisher",
+    "media",
+    "ownerId",
+    "isSaved",
+    "isContactChanged",
+    "locationLatitude",
+    "locationLongitude",
+    "publicUrl"
+  ]
+}

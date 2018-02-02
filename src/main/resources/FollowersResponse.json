@@ -1,0 +1,89 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "firstName",
+      "lastName",
+      "userName",
+      "city",
+      "cityPlaceId",
+      "country",
+      "countryCode",
+      "email",
+      "phone",
+      "follow",
+      "following",
+      "blocked",
+      "followingCount",
+      "followCount",
+      "adsCount",
+      "isBlocked"
+    ],
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "lastName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "userName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": {},
+      "city": {
+        "type": "string",
+        "minLength": 1
+      },
+      "cityPlaceId": {
+        "type": "string",
+        "minLength": 1
+      },
+      "country": {
+        "type": "string",
+        "minLength": 1
+      },
+      "countryCode": {
+        "type": "string",
+        "minLength": 1
+      },
+      "email": {
+        "type": "string",
+        "minLength": 1
+      },
+      "phone": {
+        "type": "string"
+      },
+      "follow": {
+        "type": "boolean"
+      },
+      "following": {
+        "type": "boolean"
+      },
+      "blocked": {
+        "type": "boolean"
+      },
+      "image": {},
+      "cover": {},
+      "followingCount": {
+        "type": "number"
+      },
+      "followCount": {
+        "type": "number"
+      },
+      "adsCount": {
+        "type": "number"
+      },
+      "isBlocked": {
+        "type": "boolean"
+      }
+    }
+  }
+}

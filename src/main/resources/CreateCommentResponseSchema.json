@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "isAdOwner": {
+      "type": "boolean"
+    },
+    "sender": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "contactId": {
+          "type": "number"
+        },
+        "firstName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lastName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image": {
+          "type": "string",
+          "minLength": 1
+        },
+        "email": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phone": {
+          "type": "string"
+        },
+        "isOnline": {
+          "type": "boolean"
+        },
+        "countryCode": {},
+        "locationLatitude": {},
+        "locationLongitude": {},
+        "username": {
+          "type": "string",
+          "minLength": 1
+        },
+        "placeId": {},
+        "suggestions": {}
+      },
+      "required": [
+        "id",
+        "contactId",
+        "firstName",
+        "lastName",
+        "image",
+        "email",
+        "phone",
+        "isOnline",
+        "username"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dateCreated": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "id",
+    "isAdOwner",
+    "sender",
+    "text",
+    "dateCreated"
+  ]
+}

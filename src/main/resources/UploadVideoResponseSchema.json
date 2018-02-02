@@ -1,0 +1,55 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "order",
+      "startAt",
+      "endAt",
+      "mute",
+      "originalName",
+      "name",
+      "url",
+      "type"
+    ],
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "description": {},
+      "order": {
+        "type": "number"
+      },
+      "startAt": {
+        "type": "number"
+      },
+      "endAt": {
+        "type": "number"
+      },
+      "mute": {
+        "type": "boolean"
+      },
+      "originalUrl": {},
+      "originalName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "url": {
+        "type": "string",
+        "minLength": 1
+      },
+      "type": {
+        "type": "number"
+      }
+    }
+  }
+}

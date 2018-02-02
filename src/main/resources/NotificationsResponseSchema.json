@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "id",
+          "type",
+          "dateCreated",
+          "viewDate",
+          "topicText",
+          "image",
+          "advertisementId",
+          "userId",
+          "username"
+        ],
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "type": {
+            "type": "number"
+          },
+          "dateCreated": {
+            "type": "string",
+            "minLength": 1
+          },
+          "viewDate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "readDate": {},
+          "params": {
+            }
+          },
+          "topicText": {
+            "type": "string",
+            "minLength": 1
+          },
+          "image": {
+            "type": "string",
+            "minLength": 1
+          },
+          "advertisementId": {
+          },
+          "userId": {
+            "type": "number"
+          },
+          "username": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "totalCount": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "items",
+    "totalCount"
+  ]
+}
